@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Stop Utility Application</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="text/javascript" defer src="./js/base64.js" ></script>
+
+
+</head>
+<body>
+  <div class="navbar">
+    <a class="active" href="index.html">Utility Apps</a>
+    <div class="topnav-right">
+      <div class="dropdown">
+        <button class="dropbtn">Encoder/Decoder</button>
+        <div class="dropdown-content">
+          <a href="./encoderDecoder.html">URL/Encoder Decoder</a>
+          <a href="./base64Encoder.html">Base64 Encoder</a>
+          <a href="./base64Decoder.html">Base64 Decoder</a>
+          <a href="#">MD-5 Hash Generator</a>
+          <a href="#">SHA-1 Hash Generator</a>
+          <a href="#">SHA-256 Hash Generator</a>
+          <a href="#">SHA-512 Generator</a>
+        </div>
+      </div>
+      <a href="#news">Color Converters</a>
+      <a href="#news">Timestamp Converters</a>
+      <a href="#news">Unit Converters</a>
+      <a href="#news">Number Base Converters</a>
+      <a href="#news">String Utilities</a>
+    </div>
+  </div>
+
+  <main>
+    <div style="text-align: center;">
+    <h2>Base 64 Encoder</h2>
+    <h3>Encode a base64 string:</h3>
+    <textarea type="text" id="urlInput" placeholder="Enter the text to encode." rows="15" cols="60"></textarea>
+    <textarea type="text" id="urlOutput" placeholder="Your results will appear here." rows="15" cols="60"  ></textarea>
+    </div>
+    <br>
+    <div style="text-align: center;">
+    <input type="button" id="encode-button" value= "Encode">
+    <input type="button" id="clear-button" value= "Clear">
+    </div>
+    <br>
+  </main>
+
+</body>
+</html>
