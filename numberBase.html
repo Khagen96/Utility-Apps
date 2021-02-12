@@ -7,6 +7,7 @@
   <title>One Stop Utility Application</title>
 
   <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" defer src="./js/numberbase.js" ></script>
 
 </head>
 <body>
@@ -35,35 +36,44 @@
 
   <main>
     <div style="text-align: center;">
-    <h2>SHA-512 Hash Generator</h2>
-    <h3>Encode a string in SHA-512:</h3>
-    <textarea type="text" id="urlInput" placeholder="Enter the text to Encode." rows="15" cols="60"></textarea>
+    <h2>Number Base Converters</h2>
+    <p>Convert From:</p>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Binary</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Decimal</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Hexadecimal</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Octal</label><br>
+
+  <br>  
+
+  <p>Convert To</p>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">Binary</label><br>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">Decimal</label><br>  
+  <input type="radio" id="age3" name="age" value="100">
+  <label for="age3">Hexadecimal</label><br>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">Octal</label><br><br>
+
+
+    <textarea type="text" id="urlInput" placeholder="Enter value." rows="15" cols="60"></textarea>
     <textarea type="text" id="urlOutput" placeholder="Your results will appear here." rows="15" cols="60"  ></textarea>
     </div>
     <br>
     <div style="text-align: center;">
-    <input type="button" id="encode-button" value= "Encode">
+    <input type="button" id="convert-button" value= "Convert">
+    <input type="button" id="copy-button" value= "Copy">
     <input type="button" id="clear-button" value= "Clear">
     </div>
     <br>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
-  
-  <script>
-          const input = document.querySelector('#urlInput');
-          const sha512btn = document.querySelector('#encode-button');
-          const clearbtn = document.querySelector('#clear-button');
-          clearbtn.addEventListener('click', () => {
-              document.querySelector('#urlInput').value = '';
-              document.querySelector('#urlOutput').value = '';
-          });
-          sha512btn.addEventListener('click', () => {
-              const hash = CryptoJS.SHA512(input.value);
-              document.querySelector('#urlOutput').value = hash.toString(CryptoJS.enc.Hex);
-          });
-  
-  </script>
+
+
 
 </body>
 </html>

@@ -77,3 +77,11 @@
   background-color: #4CAF50;
   color: white;
 }
+
+
+button:active{
+  background:olive;
+}
+textarea{
+  resize: none;
+}
