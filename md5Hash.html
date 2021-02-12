@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Stop Utility Application</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <div class="navbar">
+    <a class="active" href="index.html">Utility Apps</a>
+    <div class="topnav-right">
+      <div class="dropdown">
+        <button class="dropbtn">Encoder/Decoder</button>
+        <div class="dropdown-content">
+          <a href="./encoderDecoder.html">URL/Encoder Decoder</a>
+          <a href="./base64Encoder.html">Base64 Encoder</a>
+          <a href="./base64Decoder.html">Base64 Decoder</a>
+          <a href="./md5Hash.html">MD-5 Hash Generator</a>
+          <a href="./sha1.html">SHA-1 Hash Generator</a>
+          <a href="./sha256.html">SHA-256 Hash Generator</a>
+          <a href="./sha512.html">SHA-512 Generator</a>
+        </div>
+      </div>
+      <a href="#news">Color Converters</a>
+      <a href="#news">Timestamp Converters</a>
+      <a href="#news">Unit Converters</a>
+      <a href="#news">Number Base Converters</a>
+      <a href="#news">String Utilities</a>
+    </div>
+  </div>
+
+  <main>
+    <div style="text-align: center;">
+    <h2>MD-5 Hash Generator</h2>
+    <h3>Encode a string in MD-5:</h3>
+    <textarea type="text" id="urlInput" placeholder="Enter the text to Encode." rows="15" cols="60"></textarea>
+    <textarea type="text" id="urlOutput" placeholder="Your results will appear here." rows="15" cols="60"  ></textarea>
+    </div>
+    <br>
+    <div style="text-align: center;">
+    <input type="button" id="encode-button" value= "Encode">
+    <input type="button" id="clear-button" value= "Clear">
+    </div>
+    <br>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+  <script>
+          const input = document.querySelector('#urlInput');
+          const md5btn = document.querySelector('#encode-button');
+          const clearbtn = document.querySelector('#clear-button');
+          clearbtn.addEventListener('click', () => {
+              document.querySelector('#urlInput').value = '';
+              document.querySelector('#urlOutput').value = '';
+          });
+          md5btn.addEventListener('click', () => {
+              const hash = CryptoJS.MD5(input.value);
+              document.querySelector('#urlOutput').value = hash.toString(CryptoJS.enc.Hex);
+          });
+  
+  </script>
+
+</body>
+</html>
