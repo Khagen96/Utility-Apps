@@ -5,12 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>One Stop Utility Application</title>
-
-  <link rel="stylesheet" href="css/style.css">
-
-  <script type="text/javascript" defer src="./js/base64Encode.js" ></script>
-
-
+  <link rel="stylesheet" href="css/hextorgb.css">
+  <script type="text/javascript" defer src="./js/hextoRGB.js" ></script>
 </head>
 <body>
   <nav>
@@ -57,23 +53,55 @@
     
         </ul>
     </li>
+    
     </ul>
     </nav>
 
-  <main>
-    <div style="text-align: center;">
-    <h2>Base 64 Encoder</h2>
-    <h3>Encode a base64 string:</h3>
-    <textarea type="text" id="urlInput" placeholder="Enter the text to encode." rows="15" cols="60"></textarea>
-    <textarea type="text" id="urlOutput" placeholder="Your results will appear here." rows="15" cols="60"  ></textarea>
-    </div>
-    <br>
-    <div style="text-align: center;">
-    <input type="button" id="encode-button" value= "Encode">
-    <input type="button" id="clear-button" value= "Clear">
-    </div>
-    <br>
-  </main>
+    
+    <div class="hexbox">    
+      <label for="box">Enter 6 digit rgb value(#RRGGBB)</label>
+      <input type="text"  id="box">
+      <input type="button" id="calculate-button" value= "calculate">
+      <input type="button" id="clear-button" value= "Clear">
+      <br>
+      <label for="red">RED</label>
+      <input type="text"  id="red">
+      <br>
+      <label for="green">GREEN</label>
+      <input type="text"  id="green">
+      <br>
+      <label for="blue">BLUE</label>
+      <input type="text"  id="blue">
+  </div>
+<script>
+const red = document.querySelector('#red');
+const green = document.querySelector('#green');
+const blue = document.querySelector('#blue');
+const calculateButton = document.querySelector('#calculate-button');
+const clearButton = document.querySelector('#clear-button');
+calculateButton.addEventListener('click', () => {
+    let hex = document.querySelector('#box').value;
 
+
+    r = parseInt(hex.substring(0,2));
+	g =  parseInt(hex.substring(2,4));
+	b =  parseInt(hex.substring(4,6));
+
+    var color = 'rgb('+r+','+g+','+b+')';
+    document.body.style.backgroundColor = color;
+
+    document.querySelector('#red').value=r;
+    document.querySelector('#green').value=g;
+    document.querySelector('#blue').value=b;
+});
+clearButton.addEventListener('click', () => {
+    document.querySelector('#box').value=" ";
+    document.querySelector('#red').value=" ";
+    document.querySelector('#green').value=" ";
+    document.querySelector('#blue').value=" ";
+    document.body.style.backgroundColor = 'rgb(255,255,255)';
+
+});
+</script>
 </body>
 </html>

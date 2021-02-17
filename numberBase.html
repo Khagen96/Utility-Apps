@@ -11,57 +11,89 @@
 
 </head>
 <body>
-  <div class="navbar">
-    <a class="active" href="index.html">Utility Apps</a>
-    <div class="topnav-right">
-      <div class="dropdown">
-        <button class="dropbtn">Encoder/Decoder</button>
-        <div class="dropdown-content">
-          <a href="./encoderDecoder.html">URL/Encoder Decoder</a>
-          <a href="./base64Encoder.html">Base64 Encoder</a>
-          <a href="./base64Decoder.html">Base64 Decoder</a>
-          <a href="./md5Hash.html">MD-5 Hash Generator</a>
-          <a href="./sha1.html">SHA-1 Hash Generator</a>
-          <a href="./sha256.html">SHA-256 Hash Generator</a>
-          <a href="./sha512.html">SHA-512 Generator</a>
-        </div>
-      </div>
-      <a href="#news">Color Converters</a>
-      <a href="#news">Timestamp Converters</a>
-      <a href="#news">Unit Converters</a>
-      <a href="./numberBase.html">Number Base Converters</a>
-      <a href="#news">String Utilities</a>
-    </div>
-  </div>
+  <nav>
+    <p>Utility Apps</p>
+    <ul>
+    <li><a href="index.html">HOME</a>
+    <li><a href="#">Encoder/Decoder</a>
+        <ul>
+            <li><a href="./encoderDecoder.html">URL/Encoder Decoder</a></li>
+            <li><a href="./base64Encoder.html">Base64 Encoder</a></li>
+            <li><a href="./base64Decoder.html">Base64 Decoder</a></li>
+            <li><a href="./md5Hash.html">MD-5 Hash Generator</a></li>
+            <li><a href="./sha1.html">SHA-1 Hash Generator</a></li>
+            <li><a href="./sha256.html">SHA-256 Hash Generator</a></li>
+            <li><a href="./sha512.html">SHA-512 Generator</a></li>    
+        </ul>
+    </li>
+    <li><a href="#">Color Converters</a>
+        <ul>
+            <li><a href="./rgbToHEX.html">RGB to HEX</a></li>
+            <li><a href="./hexToRGB.html">HEX to RGB</a></li>  
+        </ul>
+    </li>
+    <li><a href="#">Time Utilities</a>
+        <ul>
+            <li><a href="#">Epoch Converter</a></li>
+            <li><a href="#">Timer</a></li>
+            <li><a href="#">Stop Watch</a></li>  
+        </ul>
+    </li>
+    <li><a href="#">Unit Converters</a></li>
+    <li><a href="./numberBase.html">Number Base Converters</a></li>
+    <li><a href="#">Text Utilities</a>
+        <ul>
+            <li><a href="#">Change Case</a></li>
+            <li><a href="#">String Count</a></li>
+            <li><a href="#">Translate</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Extras</a>
+        <ul>
+            <li><a href="#">Clock</a></li>
+            <li><a href="#">IP Address</a></li>
+    
+        </ul>
+    </li>
+    
+    </ul>
+    </nav>
 
   <main>
     <div style="text-align: center;">
     <h2>Number Base Converters</h2>
-    <p>Convert From:</p>
-  <input type="radio" id="male" name="gender" value="male">
-  <label for="male">Binary</label><br>
-  <input type="radio" id="female" name="gender" value="female">
-  <label for="female">Decimal</label><br>
-  <input type="radio" id="other" name="gender" value="other">
-  <label for="other">Hexadecimal</label><br>
-  <input type="radio" id="other" name="gender" value="other">
-  <label for="other">Octal</label><br>
+    <div class="number-base-conversions">
 
-  <br>  
+      <p>Convert From:</p>
+      <input type="radio" id="convert-from-binary" name="convert-from" value="binary">
+      <label for="binary">Binary</label>
 
-  <p>Convert To</p>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">Binary</label><br>
-  <input type="radio" id="age2" name="age" value="60">
-  <label for="age2">Decimal</label><br>  
-  <input type="radio" id="age3" name="age" value="100">
-  <label for="age3">Hexadecimal</label><br>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">Octal</label><br><br>
+      <input type="radio" id="convert-from-decimal" name="convert-from" value="decimal">
+      <label for="decimal">Decimal</label>
 
+      <input type="radio" id="convert-from-hexadecimal" name="convert-from" value="hexadecimal">
+      <label for="hexadecimal">Hexadecimal</label>
 
-    <textarea type="text" id="urlInput" placeholder="Enter value." rows="15" cols="60"></textarea>
-    <textarea type="text" id="urlOutput" placeholder="Your results will appear here." rows="15" cols="60"  ></textarea>
+      <input type="radio" id="convert-from-octal" name="convert-from" value="octal">
+      <label for="octal">Octal</label>
+
+      <p>Convert To:</p>
+      <input type="radio" id="convert-to-binary" name="convert-to" value="binary">
+      <label for="binary">Binary</label>
+
+      <input type="radio" id="convert-to-decimal" name="convert-to" value="decimal">
+      <label for="decimal">Decimal</label>
+
+      <input type="radio" id="convert-to-hexadecimal" name="convert-to" value="hexadecimal">
+      <label for="hexadecimal">Hexadecimal</label>
+
+      <input type="radio" id="convert-to-octal" name="convert-to" value="octal">
+      <label for="octal">Octal</label>
+    <br>
+    <br>
+
+    <textarea type="text" id="input-box" placeholder="Enter value." rows="5" cols="50"></textarea>
+    <textarea type="text" id="output-box" placeholder="Your result." rows="5" cols="50"  ></textarea>
     </div>
     <br>
     <div style="text-align: center;">
@@ -71,9 +103,6 @@
     </div>
     <br>
   </main>
-
-
-
 
 </body>
 </html>

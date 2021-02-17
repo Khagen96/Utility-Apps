@@ -7,10 +7,7 @@
   <title>One Stop Utility Application</title>
 
   <link rel="stylesheet" href="css/style.css">
-
-  <script type="text/javascript" defer src="./js/base64Encode.js" ></script>
-
-
+  <script type="text/javascript" defer src="./js/colorConvertors.js" ></script>
 </head>
 <body>
   <nav>
@@ -57,23 +54,20 @@
     
         </ul>
     </li>
+    
     </ul>
     </nav>
+    
+  <div class="color-box">
+    <div class="slider-box">
+      Result: <input type="text"  id="box" value="rgb(255,255,255)">
+      Red: <input type="range"  id="red" value="255" min="0" max="255">
+      Green: <input type="range"  id="green" value="255" min="0" max="255">
+      Blue: <input type="range"  id="blue" value="255" min="0" max="255">
+    </div>
+  </div>
 
-  <main>
-    <div style="text-align: center;">
-    <h2>Base 64 Encoder</h2>
-    <h3>Encode a base64 string:</h3>
-    <textarea type="text" id="urlInput" placeholder="Enter the text to encode." rows="15" cols="60"></textarea>
-    <textarea type="text" id="urlOutput" placeholder="Your results will appear here." rows="15" cols="60"  ></textarea>
-    </div>
-    <br>
-    <div style="text-align: center;">
-    <input type="button" id="encode-button" value= "Encode">
-    <input type="button" id="clear-button" value= "Clear">
-    </div>
-    <br>
-  </main>
+
 
 </body>
 </html>
