@@ -18,6 +18,10 @@ nav p{                  /* logo */
     float:left;
     padding: 0px 20px; /*left right*/
 }
+nav p a{                  /* logo */
+    text-decoration: none;
+    color:#222;
+}
 nav ul{
     float: left;
 }
@@ -31,7 +35,7 @@ nav ul li a{
     font-family: arial;
     color:#222;
     font-size: 14px;
-    padding:18px 14px;
+    padding:18px 10px;
     text-decoration: none;
 }
 nav ul li ul{
@@ -45,7 +49,7 @@ nav ul li:hover ul {
 
 }
 nav ul li ul li{ /*drop items*/
-    width:180px
+    width:190px
 }
 nav ul li ul li a{ /*drop items*/
     padding: 10px 14px;
@@ -54,3 +58,18 @@ nav ul li ul li a:hover{ /*drop items*/
     background-color: #f3f3f3;
 }
 
+
+.text-area{
+    display: flex;
+}
+
+.section-url{
+    margin-top: 50px;
+    margin-left: 50px;
+    height:300px;
+    width:500px;
+    background-color:white;
+}
+textarea{
+    resize: none;
+  }

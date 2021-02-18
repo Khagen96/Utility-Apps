@@ -18,6 +18,10 @@ nav p{                  /* logo */
   float:left;
   padding: 0px 20px; /*left right*/
 }
+nav p a{                  /* logo */
+  text-decoration: none;
+  color:#222;
+}
 nav ul{
   float: left;
 }
