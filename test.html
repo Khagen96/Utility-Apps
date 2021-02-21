@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/test.css">
+    <script defer src="./js/test.js" ></script>
+
 </head>
 <body>
     <nav>
@@ -53,9 +55,8 @@
         </li>
         </ul>
         </nav>
-        <p>Language Translator</p>
         <div class="translate-content">
-            <h2 style='padding-left: 30px;padding-top: 25px;'>About:</h2>
+            <h2 style='padding-left: 30px;padding-top: 25px;'>Language Converter</h2>
             <p style="padding-left: 30px; padding-right: 30px;padding-top: 5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
 
 
@@ -64,8 +65,9 @@
         <div class="container">
             <div class="translate-box">
                 <h3 style="text-align: center;">Convert From:</h3>
+                <br>
                 <div style="text-align: center;">
-                    <select  class = "options" name="inputType" id="inputType" >
+                    <select  class = "convert-from-options" name="inputType" id="inputType" >
                         <option value="English">English</option>
                         <option value="Hindi">Hindi</option>
                         <option value="Spanish">Spanish</option>
@@ -76,16 +78,17 @@
                     </select>
                 </div>
                 <div class="input-field" style="text-align: center;">
-                    <label for="input-text"> Enter the text</label>
-                    <textarea class ="wideInput"name="input-text" id="input-text"></textarea>
+                    <br><br>
+                    <textarea type="text" id="languageInput" placeholder="Enter the text to translate." rows="20" cols="70"></textarea>
                     
                 </div>
             </div>
 
             <div class="translate-box">
                 <h3 style="text-align: center;">Convert To:</h3>
+                <br>
                 <div style="text-align: center;">
-                    <select  class = "options" name="inputType" id="inputType">
+                    <select  class = "convert-to-options" name="outputType" id="outputType">
                         <option value="English">English</option>
                         <option value="Hindi">Hindi</option>
                         <option value="Spanish">Spanish</option>
@@ -96,12 +99,13 @@
                     </select>
                 </div>
                 <div class="input-field" style="text-align: center;">
-                    <label for="input-text"> Enter the text</label>
-                    <textarea class ="wideInput"name="input-text" id="input-text"></textarea>
-
-
+                    <br><br>
+                    <textarea type="text" id="languageOutput" placeholder="Your results will appear here." rows="20" cols="70"></textarea>
+                    
             </div>
         </div>
+        <div><input type="button" id="translate-button" value= "Translate"></div>
+
         
 
 

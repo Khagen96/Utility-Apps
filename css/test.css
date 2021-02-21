@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
   }
   body{
     background-color: #e8ebea;
@@ -135,16 +136,12 @@
     width:90%;
   }
    .container{
-
     width:90%;
-    height: 90vh;
+    height: 80vh;
     margin-left: 5%;
     background: white;
     display: flex;
-
-    justify-content: space-around;
-    flex-flow: nowrap;
-
+    justify-content: space-between;
   }
   .translate-box{
     width:80%;
@@ -154,8 +151,9 @@
     box-sizing: border-box;
   }
 
-  
+  div #translate-button{
 
+  }
 
 
   /* media queries for translate box
