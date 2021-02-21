@@ -137,7 +137,7 @@
   }
    .container{
     width:90%;
-    height: 80vh;
+    height: 65vh;
     margin-left: 5%;
     background: white;
     display: flex;
@@ -145,13 +145,19 @@
   }
   .translate-box{
     width:80%;
-    height: 450px;
-    background-color: yellow;
+    height: 370px;
+    background-color: lightskyblue;
     margin: 30px;
     box-sizing: border-box;
   }
 
-  div #translate-button{
+  .button-row{
+
+    margin-left: 5%;
+    background: white;
+    width:90%;
+    height: 40px;
+    padding-top: 12px;;
 
   }
 
