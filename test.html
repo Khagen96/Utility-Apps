@@ -5,132 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/test.css">
     <script defer src="./js/test.js" ></script>
 
 </head>
 <body>
     <nav>
-        <p><a href="index.html">Utility Apps</a></p>
+        <p><a href="#">URL Shortner</a></p>
         <ul>
-        <li><a href="#">Encoder/Decoder</a>
+        <li><a href="#">Test 1</a>
             <ul>
-                <li><a href="./encoderDecoder.html">URL/Encoder Decoder</a></li>
-                <li><a href="./base64Encoder.html">Base64 Encoder</a></li>
-                <li><a href="./base64Decoder.html">Base64 Decoder</a></li>
-                <li><a href="./md5Hash.html">MD-5 Hash Generator</a></li>
-                <li><a href="./sha1.html">SHA-1 Hash Generator</a></li>
-                <li><a href="./sha256.html">SHA-256 Hash Generator</a></li>
-                <li><a href="./sha512.html">SHA-512 Hash Generator</a></li>    
+                <li><a href="#">Dropdown 1</a></li>
+                <li><a href="#">Dropdown 2</a></li>  
             </ul>
         </li>
-        <li><a href="#">Color Converters</a>
-            <ul>
-                <li><a href="./rgbToHEX.html">RGB to HEX</a></li>
-                <li><a href="./hexToRGB.html">HEX to RGB</a></li>  
-            </ul>
-        </li>
-        <li><a href="#">Time Utilities</a>
-            <ul>
-                <li><a href="#">Epoch Converter</a></li>
-                <li><a href="#">Timer</a></li>
-                <li><a href="#">Stop Watch</a></li>  
-            </ul>
-        </li>
-        <li><a href="#">Unit Converters</a></li>
-        <li><a href="./numberBase.html">Number Base Converters</a></li>
-        <li><a href="#">Text Utilities</a>
-            <ul>
-                <li><a href="#">Change Case</a></li>
-                <li><a href="#">String Count</a></li>
-                <li><a href="#">Translate</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Extras</a>
-            <ul>
-                <li><a href="#">Clock</a></li>
-                <li><a href="#">IP Address</a></li>
-        
-            </ul>
-        </li>
+        <li><a href="#">Test 2</a></li>
         </ul>
         </nav>
         <div class="translate-content">
-            <h2 style='padding-left: 30px;padding-top: 25px;'>Language Converter</h2>
-            <p style="padding-left: 30px; padding-right: 30px;padding-top: 5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-
-
-
-        </div>
-        <div class="container">
-            <div class="translate-box">
-                <h3 style="text-align: center;">Convert From:</h3>
-                <br>
-                <div style="text-align: center;">
-                    <select  class = "convert-from-options" name="inputType" id="inputType" >
-                        <option value="English">English</option>
-                        <option value="Hindi">Hindi</option>
-                        <option value="French">French</option>
-                        <option value="Greek">Greek</option>
-                        <option value="Indonesian">Indonesian</option>
-                        <option value="Italian">Italian</option>
-                        <option value="Japanese">Japanese</option>
-                        <option value="Korean">Korean</option>
-                        <option value="Latin">Latin</option>
-                        <option value="Mongolian">Mongolian</option>
-                        <option value="Spanish">Spanish</option>
-                    </select>
-                </div>
-                <div class="input-field" style="text-align: center;">
-                    <br>
-                    <textarea type="text" id="languageInput" placeholder="Enter the text to translate." rows="18" cols="70"></textarea>
-                    
-                </div>
+            <div class="input-field" >
+                <textarea type="text" id="url-Input" placeholder="Enter your URL..." rows="3" cols="130"></textarea>
+                <input type="button" id="shorten-button" value= "Shorten">
+                <input type="button" id="clear-button" value= "Clear">
+                <input type="button" id="copy-button" value= "Copy">
             </div>
 
-            <div class="translate-box">
-                <h3 style="text-align: center;">Convert To:</h3>
-                <br>
-                <div style="text-align: center;">
-                    <select  class = "convert-to-options" name="outputType" id="outputType">
-                        <option value="English">English</option>
-                        <option value="Hindi">Hindi</option>
-                        <option value="Nepali">Nepali</option>
-                        <option value="French">French</option>
-                        <option value="Greek">Greek</option>
-                        <option value="Indonesian">Indonesian</option>
-                        <option value="Italian">Italian</option>
-                        <option value="Japanese">Japanese</option>
-                        <option value="Korean">Korean</option>
-                        <option value="Latin">Latin</option>
-                        <option value="Mongolian">Mongolian</option>
-                        <option value="Spanish">Spanish</option>
-                        
-                    </select>
-                </div>
-                <div class="input-field" style="text-align: center;">
-                    <br>
-                    <textarea type="text" id="languageOutput" placeholder="Your results will appear here." rows="18" cols="70"></textarea>
-                    
-                </div>
+            <div class="display-all-url">
+            <textarea type="text" id="all-url" placeholder="All URL's will be dispalyed here..." rows="10" cols="130"></textarea>
+            <input type="button" id="get-all-button" value= "Get all links">
             </div>
 
-        </div>
-        <div class="button-row" style="text-align: center;" >
-            <input type="button" id="translate-button" value= "Translate">
-            <input type="button" id="copy-button" value= "Copy">
-            <input type="button" id="clear-button" value= "Clear">
-        
-        
+            <div class="display-search-url">
+            <textarea type="text" id="search-result-url" placeholder="Enter short URL to search..." rows="3" cols="130"></textarea>
+            <input type="button" id="search-button" value= "Search">
+            <textarea type="text" id="search-result-url" placeholder="Your search result will appear here..." rows="3" cols="130"></textarea>
+            </div>
         </div>
 
 
-
-        
-
-
-
-        
        <!-- Footer Element
         <div class="footer">
         <p>Created By:KBH</p>
